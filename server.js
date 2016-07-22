@@ -1,5 +1,5 @@
 var http = require('http');
-var controller = require('./library/controller.js');
+var controller = require('./library/mainController.js');
 var port = 8080;
 var server = http.createServer(controller);
 server.listen(port);
