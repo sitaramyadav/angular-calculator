@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "dependencies":{
+    "chai": "^3.4.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "min": "mocha -R min --recursive",
+    "watch": "mocha -R min --watch --recursive",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0"
   }
 }
