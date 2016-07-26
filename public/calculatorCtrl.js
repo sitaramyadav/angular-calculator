@@ -28,8 +28,9 @@ app.controller('calculatorCtrl', function($scope) {
   }
     $scope.calculate = function(){
       let result = $scope.prevResult.split($scope.operation);
-
-      $scope.result = getResult(Number(result[0]),$scope.operation, Number(result[1]));
+      $scope.result = result.reduce(function(pre,next,i,a){
+        return getResult(Number(pre),$scope.operation, Number(next));
+      })
       $scope.prevResult = $scope.result;
 
     }
