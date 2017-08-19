@@ -1,35 +1,36 @@
-    <div ng-app="calculator" ng-controller="calculatorCtrl">
+    <div ng-app="calculator" class="calcbody" ng-controller="calculatorCtrl">
       <link rel="stylesheet" href="css/calculator.css">
       <script src="./angular.min.js"></script>
       <script src="./calculatorCtrl.js"></script>
       <div>
-        {{result}}
+        <span></span>{{prevResult}}
       </div>
       <div>
-        {{prevResult}}
-      </div>
-      <div class="calcbody">
         <div class="calcbuttons">
           <button name="btn1" class="numberbutton" value="1" ng-click="calculatedValue(1)">1</button>
           <button name="btn2" class="numberbutton" value="2" ng-click="calculatedValue(2)">2</button>
           <button name="btn3" class="numberbutton" value="3" ng-click="calculatedValue(3)">3</button>
-          <button name="btnMinus" class="operationbutton" ng-click="calculatedValue('-')"> - </button>
           <br>
           <button name="btn4" class="numberbutton" value="4" ng-click="calculatedValue(4)">4</button>
           <button name="btn5" class="numberbutton" value="5" ng-click="calculatedValue(5)">5</button>
           <button name="btn6" class="numberbutton" value="6" ng-click="calculatedValue(6)">6</button>
-          <button name="btnPlus" class="operationbutton" ng-click="calculatedValue('+')">+</button>
           <br>
           <button name="btn7" class="numberbutton" value="7" ng-click="calculatedValue(7)">7</button>
           <button name="btn8" class="numberbutton" value="8" ng-click="calculatedValue(8)">8</button>
           <button name="btn9" class="numberbutton" value="9" ng-click="calculatedValue(9)">9</button>
-          <button name="btnEquals" class="operationbutton" ng-click="calculatedValue('/')">/</button>
           <br>
           <button name="btn0" class="numberbutton" value="0" ng-click="calculatedValue(0)">0</button>
-          <button name="btnClear" class="clearbutton" ng-click="clear()">CLEAR</button>
-          <button name="result" class="clearbutton" ng-click="calculate()">=</button>
+          <button name="btnMinus" class="operationbutton" ng-click="calculatedValue('-')"> - </button>
+          <button name="btnPlus" class="operationbutton" ng-click="calculatedValue('+')">+</button>
+          <br>
+          <button name="btnEquals" class="operationbutton" ng-click="calculatedValue('/')">/</button>
+          <button name="btnClear" class="clearbutton" ng-click="clear()">Clear</button>
+          <button name="result" class="clearbutton" ng-click="calculate()">Cal</button>
 
         </div>
+      </div>
+      <div>
+        <span>Result: </span>{{result}}
       </div>
 
     </div>
